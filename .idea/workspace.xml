@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4ca5f6a-a849-467f-80ee-8a8bd3e3743f" name="Default Changelist" comment="" />
+    <list default="true" id="d4ca5f6a-a849-467f-80ee-8a8bd3e3743f" name="Default Changelist" comment="First Push">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,6 +24,9 @@
         <option value="Python Script" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1l1V14oGGXHb8GoGO2YuJmnBq9w" />
   <component name="ProjectViewState">
@@ -50,18 +64,18 @@
       <method v="2" />
     </configuration>
     <configuration name="main.v.1" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
-      <module name="Shelder" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="" />
+      <option name="SDK_HOME" value="C:\Users\37120\anaconda3\envs\Shelder\python.exe" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\37120\OneDrive\Desktop\Computer Science\Shelder\main.v.1.py" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.v.1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -85,6 +99,14 @@
       <updated>1606764366008</updated>
       <workItem from="1607080903453" duration="85000" />
     </task>
+    <task id="LOCAL-00001" summary="First Push">
+      <created>1607301452840</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607301452840</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -92,6 +114,21 @@
   </component>
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.js" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="First Push" />
+    <option name="LAST_COMMIT_MESSAGE" value="First Push" />
   </component>
   <component name="WindowStateProjectService">
     <state x="395" y="111" key="#Inspections" timestamp="1607012426790">
@@ -102,30 +139,34 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="447" y="79" width="1089" height="785" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1607200405753" />
+    <state x="548" y="137" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1607301547656">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="548" y="137" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.864@0.0.1536.864" timestamp="1607301547656" />
     <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1607198583474">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1607198583474" />
-    <state width="1515" height="225" key="GridCell.Tab.0.bottom" timestamp="1607301401355">
+    <state width="1515" height="225" key="GridCell.Tab.0.bottom" timestamp="1607301886147">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1515" height="156" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1607271802497" />
-    <state width="1515" height="225" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1607301401355" />
-    <state width="1515" height="225" key="GridCell.Tab.0.center" timestamp="1607301401355">
+    <state width="1515" height="225" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1607301886147" />
+    <state width="1515" height="225" key="GridCell.Tab.0.center" timestamp="1607301886147">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1515" height="156" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1607271802497" />
-    <state width="1515" height="225" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1607301401355" />
-    <state width="1515" height="225" key="GridCell.Tab.0.left" timestamp="1607301401354">
+    <state width="1515" height="225" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1607301886147" />
+    <state width="1515" height="225" key="GridCell.Tab.0.left" timestamp="1607301886147">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1515" height="156" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1607271802497" />
-    <state width="1515" height="225" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1607301401354" />
-    <state width="1515" height="225" key="GridCell.Tab.0.right" timestamp="1607301401355">
+    <state width="1515" height="225" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1607301886147" />
+    <state width="1515" height="225" key="GridCell.Tab.0.right" timestamp="1607301886147">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="1515" height="156" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1607271802497" />
-    <state width="1515" height="225" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1607301401355" />
+    <state width="1515" height="225" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1607301886147" />
     <state width="1515" height="277" key="GridCell.Tab.1.bottom" timestamp="1607289751529">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
@@ -150,6 +191,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1536.864@0.0.1536.864" timestamp="1607103907381" />
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1607301457961">
+      <screen x="0" y="0" width="1536" height="864" />
+    </state>
+    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1607301457961" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1606944334725">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
