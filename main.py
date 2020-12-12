@@ -2,15 +2,14 @@ import ImageHandler
 from datetime import datetime
 from datedelta import datedelta
 from bs4 import BeautifulSoup as Soup
-import requests
 import re
 import wx
 import webbrowser
-
+import requests
 # _____________________________________________________________________________________________________________________
 """
 SHELDER
-version 1.0
+version 1.1 DEV
 @ Romāns Prokopjevs 2020 | Project-2 BITL2 Riga Business School
 https://github.com/Romans-Sleepwalking/Shelder
 
@@ -96,13 +95,13 @@ class Landing(wx.Frame):
 
     def chosenDoggies(self, e):  # pressed 'Dogs' button
         global db
-        db = LabasMajasShelter('doggies')  # initializes dogs data-list
+        db = LabasMajasShelter('doggies')  # initializes data-list for doggo kitty segment
         self.Close()  # closes frame
         game.firstRound()  # calls the first game-round
 
     def chosenKitties(self, e):  # pressed 'Cats' button
         global db
-        db = LabasMajasShelter('kitties')  # initializes cats data-list
+        db = LabasMajasShelter('kitties')  # initializes data-list for chosen kitty segment
         self.Close()  # closes frame
         game.firstRound()  # calls the first game-round
 
@@ -176,7 +175,7 @@ class YesOrNo(wx.Frame):
         self.yesButton.SetDefault()
 
     def No(self, e):  # pressed 'No' button
-        db.cuttieList.remove(db.cursor1)  # removes the cuttie obj from the data-list
+        db.cursor1.status = False  # removes the cuttie obj from the data-list
         self.Close()  # closes frame
 
     def Yes(self, e):  # pressed 'Yes' button
@@ -225,11 +224,11 @@ class LeftOrRight(wx.Frame):
         self.rightButton.SetDefault()
 
     def Left(self, e):  # pressed 'Left' button
-        db.cuttieList.remove(db.cursor2)  # removes the other, unchosen obj from the data list
+        db.cursor2.status = False  # removes the other, unchosen obj from the data list
         self.Close()  # closes frame
 
     def Right(self, e):  # pressed 'Right' button
-        db.cuttieList.remove(db.cursor1)  # removes the other, unchosen obj from the data list
+        db.cursor1.status = False  # removes the other, unchosen obj from the data list
         self.Close()  # closes frame
 
 
@@ -260,16 +259,14 @@ class ShowTheWinner(wx.Frame):
 
         panel.SetBackgroundColour('#E8FCE6')  # bg color
 
-        cuttie = db.cuttieList[0]  # reads the last stand cuttie
-
         # profile image widget
-        self.img = wx.StaticBitmap(panel, -1, wx.Bitmap(cuttie.img))
+        self.img = wx.StaticBitmap(panel, -1, wx.Bitmap(db.cursor1.img))
         self.img.SetPosition((56, 80))
 
         # cuttie's name+age and ending text widgets
         NameFont = wx.Font(30, family=wx.FONTFAMILY_MODERN, style=0, weight=90)
         EndingFont = wx.Font(25, family=wx.FONTFAMILY_MODERN, style=0, weight=90)
-        NameWidget = wx.StaticText(parent=panel, pos=((700, 240)), label=cuttie.name + cuttie.age)
+        NameWidget = wx.StaticText(parent=panel, pos=((700, 240)), label=db.cursor1.name + db.cursor1.age)
         EndingWidget = wx.StaticText(parent=panel, pos=((700, 300)), label="Is Waiting For You!")
         NameWidget.SetFont(NameFont)
         EndingWidget.SetFont(EndingFont)
@@ -279,17 +276,20 @@ class ShowTheWinner(wx.Frame):
         self.linkButton.SetSize(400, 150)
         self.Bind(wx.EVT_BUTTON, self.UseLink, self.linkButton)
         self.linkButton.SetDefault()
-        '''
-        # 'More Kitties' button widget
-        self.moreKittiesButton = wx.Button(panel, -1, label='Get', pos=(692, 550))
-        self.moreKitties.SetSize(400, 150)
-        self.Bind(wx.EVT_BUTTON, self.MoreKitties, self.moreKittiesButton)
-        self.moreKittiesButton.SetDefault()
-        '''
+
+        # 'More Cutties' button widget
+        self.moreCuttiesButton = wx.Button(panel, -1, label='More Kitties :3', pos=(200, 500))
+        self.moreCuttiesButton.SetSize(200, 80)
+        self.Bind(wx.EVT_BUTTON, self.MoreCutties, self.moreCuttiesButton)
+        self.moreCuttiesButton.SetDefault()
 
     @staticmethod
     def UseLink(e):  # pressed 'Get' button
         webbrowser.open(db.cursor1.url, new=2)  # opens 'Labās Mājas' shelter game winner's profile webpage in a new tab
+
+    @staticmethod
+    def MoreCutties(e):
+        ImageHandler.MorePictures(db.segment)
 
     def InitMenus(self):  # calls function which sets up app menubar
         menubar = wx.MenuBar()
@@ -313,9 +313,6 @@ class ShowTheWinner(wx.Frame):
         result = dlg.ShowModal()
         dlg.Destroy()
 
-    def MoreKitties(self, e):
-        pass
-
 # ______________________________________________________________________________________________________________
 #   Data fetching and processing
 
@@ -331,14 +328,15 @@ class LabasMajasShelter:
     """
     segmentURLs = {'doggies': 'https://patversme.lv/suni/', 'kitties': 'https://patversme.lv/kaki/'}
     cuttieList = []
+    activeCutties = []
     fetchCounter = 0
     cursor1 = None
     cursor2 = None
 
     def __init__(self, segment):  # called from the 'Landing' frame with chosen dogs/cats segment
-
+        self.segment = segment
         # fetches the chosen animal segment and finds the right HTML-container
-        Ramen = Soup(requests.get(self.segmentURLs[segment]).text, 'lxml')
+        Ramen = Soup(requests.get(self.segmentURLs[self.segment]).text, 'lxml')
         content = Ramen.find('div', {"class": "entry-content full-animal-list"})
 
         blackList = ['musejie-pavisam', 'kakeni-2', 'carlijs', 'kadrija']  # some known collective/unreadable profiles
@@ -396,12 +394,12 @@ class LabasMajasShelter:
 
 class Cuttie(LabasMajasShelter):
     def __init__(self, url=str):  # called from the LabasMajasShelter.__init__ method
-
         self.url = url  # initialize cuttie's profile using URL
 
     def registerProfile(self, name=str, ageData=str, imgURL=str):  # called from the LabasMajasShelter.__init__ method
         self.name = name
         self.img = ImageHandler.getImage(imgURL)  # calls the supported ImageHandler.py; returns profile image location
+        self.status = True  # if True - status is active
 
         # check for age data: if exist -> calls the decoding method
         if ageData != ' ':
@@ -449,10 +447,9 @@ class Game:
         pass
 
     def firstRound(self):  # called from the chosen doggies/kitties
-        print(len(db.cuttieList))
+
         for cuttie in db.cuttieList:  # for every active cuttie
-            print(cuttie.name)
-            db.cursor1 = cuttie  # sets cursor
+            db.cursor1 = cuttie  # pointer
             app_2 = wx.App()
             YesOrNo(None)  # launches the 'FirstRound' frame
             app_2.MainLoop()
@@ -462,25 +459,42 @@ class Game:
 
     def secondRound(self):  # called from the firstRound method
 
-        while len(db.cuttieList) != 1:  # while winner is not defined -> begin first/next iteration
+        # refreshes the list of active participants
+        for cuttie in db.cuttieList:
+            if cuttie.status is True:
+                db.activeCutties.append(cuttie)
 
-            active_cuttie_count = len(db.cuttieList)  # remember list length before shortening during an iteration
+        while len(db.activeCutties) != 1:  # while winner is not defined -> first/next iteration
 
-            for i in db.cuttieList:  # for every active cuttie
+            for cuttie in db.activeCutties:  # TEST
+                print(cuttie.name)
 
-                index = db.cuttieList.index(i)
-                if index != active_cuttie_count // 2:  # if index was not the last -> duel partner exist
-                    db.cursor1 = db.cuttieList[index]
-                    db.cursor2 = db.cuttieList[index + 1]  # sets cursors for the duel
+            for cuttie in db.activeCutties:  # for every active cuttie
+
+                index = db.activeCutties.index(cuttie)  # remember index
+
+                if index % 2 == 1:  # if index was not the last -> duel partner exist (first index is 0)
+
+                    # sets cursors for a duel
+                    db.cursor1 = db.activeCutties[index]
+                    db.cursor2 = db.activeCutties[index - 1]
+
                     app_3 = wx.App()
                     LeftOrRight(None)  # launches the 'SecondRound' frame
                     app_3.MainLoop()
                     del app_3  # deletes the frame to recall it more than once
 
-        self.showTheWinner()  # calls the winner
+            # refreshes the list of active participants
+            db.activeCutties = []
+            for cuttie in db.cuttieList:
+                if cuttie.status is True:
+                    db.activeCutties.append(cuttie)
+
+        self.showTheWinner()  # If one active participant left, the cuttie wins
 
     @staticmethod
     def showTheWinner():  # called from the secondRound method
+        db.cursor1 = db.activeCutties[0]  # reads the last stand cuttie
         app_4 = wx.App()
         ShowTheWinner(None)  # launches the 'WinnerShowcase' frame
         app_4.MainLoop()
@@ -498,3 +512,5 @@ if __name__ == '__main__':
     app_1 = wx.App()
     Landing(None)  # launches the first 'Landing' frame
     app_1.MainLoop()
+
+input()

@@ -1,5 +1,7 @@
 import wget
 from PIL import Image
+import requests
+import json
 
 
 def getImage(url):  # called from the Cuttie.registerProfile method
@@ -14,3 +16,18 @@ def getImage(url):  # called from the Cuttie.registerProfile method
     img.save(filename, "BMP")  # BEWARE OF THE IMAGE CACHE
 
     return filename  # returns the copy path
+
+
+def MorePictures(segment):
+    APIs = {'doggies': {'URL': "https://dog.ceo/api/breeds/image/random",
+                        'key': "message"},
+            'kitties': {'URL': "http://aws.random.cat//meow",
+                        'key': "file"}}
+
+    r = requests.get(APIs[segment]['URL'])
+    filename = wget.download(r.json()[APIs[segment]['key']])  # downloads the image from URL
+
+    img = Image.open(filename)
+    img.show()
+
+

@@ -10,12 +10,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4ca5f6a-a849-467f-80ee-8a8bd3e3743f" name="Default Changelist" comment="First Push">
-      <change afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="d4ca5f6a-a849-467f-80ee-8a8bd3e3743f" name="Default Changelist" comment="Last Push">
+      <change afterPath="$PROJECT_DIR$/setup.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ImageEditor.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHandler.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.v.1.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ImageHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/ImageHandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cat_icon.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dog_icon.bmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +43,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/main.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/setup.py" />
     <property name="settings.editor.selected.configurable" value="preferences.editor" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -60,6 +61,27 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="setup" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="C:\Users\37120\anaconda3\envs\Shelder\python.exe" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/setup.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -90,8 +112,9 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.test" />
       <item itemvalue="Python.main" />
+      <item itemvalue="Python.setup" />
+      <item itemvalue="Python.test" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -111,7 +134,21 @@
       <option name="project" value="LOCAL" />
       <updated>1607301452840</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Last Push">
+      <created>1607319229734</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1607319229734</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Last Push">
+      <created>1607319256671</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1607319256671</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,76 +171,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="First Push" />
-    <option name="LAST_COMMIT_MESSAGE" value="First Push" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="395" y="111" key="#Inspections" timestamp="1607012426790">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="395" y="111" key="#Inspections/0.0.1536.864@0.0.1536.864" timestamp="1607012426790" />
-    <state x="447" y="0" width="1089" height="864" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607317895522">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="447" y="0" width="1089" height="864" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.864@0.0.1536.864" timestamp="1607317895522" />
-    <state x="548" y="137" key="#com.intellij.ide.macro.MacrosDialog" timestamp="1607301547656">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="548" y="137" key="#com.intellij.ide.macro.MacrosDialog/0.0.1536.864@0.0.1536.864" timestamp="1607301547656" />
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1607317892514">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1607317892514" />
-    <state width="1515" height="149" key="GridCell.Tab.0.bottom" timestamp="1607318254178">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1515" height="156" key="GridCell.Tab.0.bottom/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1607271802497" />
-    <state width="1515" height="149" key="GridCell.Tab.0.bottom/0.0.1536.864@0.0.1536.864" timestamp="1607318254178" />
-    <state width="1515" height="149" key="GridCell.Tab.0.center" timestamp="1607318254178">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1515" height="156" key="GridCell.Tab.0.center/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1607271802497" />
-    <state width="1515" height="149" key="GridCell.Tab.0.center/0.0.1536.864@0.0.1536.864" timestamp="1607318254178" />
-    <state width="1515" height="149" key="GridCell.Tab.0.left" timestamp="1607318254178">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1515" height="156" key="GridCell.Tab.0.left/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1607271802497" />
-    <state width="1515" height="149" key="GridCell.Tab.0.left/0.0.1536.864@0.0.1536.864" timestamp="1607318254178" />
-    <state width="1515" height="149" key="GridCell.Tab.0.right" timestamp="1607318254178">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1515" height="156" key="GridCell.Tab.0.right/0.0.1536.864/1920.0.1280.720@0.0.1536.864" timestamp="1607271802497" />
-    <state width="1515" height="149" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1607318254178" />
-    <state width="1515" height="277" key="GridCell.Tab.1.bottom" timestamp="1607313525570">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1515" height="277" key="GridCell.Tab.1.bottom/0.0.1536.864@0.0.1536.864" timestamp="1607313525570" />
-    <state width="1515" height="277" key="GridCell.Tab.1.center" timestamp="1607313525570">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1515" height="277" key="GridCell.Tab.1.center/0.0.1536.864@0.0.1536.864" timestamp="1607313525570" />
-    <state width="1515" height="277" key="GridCell.Tab.1.left" timestamp="1607313525570">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1515" height="277" key="GridCell.Tab.1.left/0.0.1536.864@0.0.1536.864" timestamp="1607313525570" />
-    <state width="1515" height="277" key="GridCell.Tab.1.right" timestamp="1607313525570">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="1515" height="277" key="GridCell.Tab.1.right/0.0.1536.864@0.0.1536.864" timestamp="1607313525570" />
-    <state x="277" y="0" key="SettingsEditor" timestamp="1607220911277">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="277" y="0" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1607220911277" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1607103907381">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1536.864@0.0.1536.864" timestamp="1607103907381" />
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2" timestamp="1607319168684">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="361" y="165" key="Vcs.Push.Dialog.v2/0.0.1536.864@0.0.1536.864" timestamp="1607319168684" />
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1606944334725">
-      <screen x="0" y="0" width="1536" height="864" />
-    </state>
-    <state x="431" y="181" width="672" height="678" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1606944334725" />
+    <MESSAGE value="Last Push" />
+    <option name="LAST_COMMIT_MESSAGE" value="Last Push" />
   </component>
 </project>
