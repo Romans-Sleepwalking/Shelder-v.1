@@ -1,5 +1,5 @@
 ### SHELDER
-#### version 1.0
+#### version 1.1
 #### @ Romāns Dec 2020
 ---
 Shelder is a pet speed-dating application. The app finds homes for abandoned darlings using a modern "dating app" design.
