@@ -12,5 +12,4 @@ This app use:
       
 Note:
 - wxPython is an awful decision: not only because of the fact that the idea and format requires a web-app, it's an old and badly documented Python framework
-        
-Maybe a second app version is coming soon.
+- Maybe a second app version is coming soon.
