@@ -1,5 +1,5 @@
 ### SHELDER
-#### version 1.1
+#### version 1
 #### @ Romāns Dec 2020
 ---
 [YouTube DEMO](https://www.youtube.com/watch?v=Gn7JK52SucE&t=7s&ab_channel=Romans "Romans Sleepwalking YouTube Channel")
