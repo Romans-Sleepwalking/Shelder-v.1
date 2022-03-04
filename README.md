@@ -7,6 +7,6 @@
 The Buyer-to-Pet speed-dating application with Tinder-like visual desing. The author was concerned about the amount of sheltered animals in Riga, Latvia. Therefore, he created the app that inspires potential care-givers to consider adopting sheltered animals rather than purchasing via sequential logic and modern gamificated design. The pet database loads at the first step of program execution - data corresponds to the local shelter in Riga (link-supported). 
 
 This app use:
- - Python as programming language because it was cheap.
- - Beautiful Soup (Python) library to web scrape data from the "Lābas Mājas" shelter located in Riga, Latvia.
- - wxPython library as a Windows GUI framework. That was an awful decision because it is extremely user unfriendly. The format requires browser UI for accessibility.
+ - Python 3.8 as a programming language because it is cheap.
+ - Beautiful Soup library to web scrape pet data from the "Lābas Mājas" shelter official website located in Riga, Latvia.
+ - wxPython library as a Windows GUI framework. That was an awful decision because it is extremely user unfriendly. The format requires browser UI for the best accessibility.
