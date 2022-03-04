@@ -9,4 +9,4 @@ The Owner-to-Pet speed-dating application with Tinder-like visual desing. The au
 This app use:
  - Python as programming language because it was cheap.
  - Beautiful Soup (Python) library to web scrape data from the "Lābas Mājas" shelter located in Riga, Latvia.
- - wxPython library as a Windows GUI framework. That was an awful decision because of the fact that the format requires a web user interface.
+ - wxPython library as a Windows GUI framework. That was an awful decision because it is extremely user unfriendly. The format requires web UI.
